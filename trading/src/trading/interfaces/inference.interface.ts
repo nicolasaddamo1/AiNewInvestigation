@@ -1,4 +1,4 @@
-export class InferenceResultDto {
+export interface InferenceResponse {
     predictions: Array<{
         class: string;
         confidence: number;
@@ -9,5 +9,4 @@ export class InferenceResultDto {
             height: number;
         };
     }>;
-    decision: string;
 }
