@@ -9,15 +9,15 @@ export class TradingService {
     constructor(private readonly configService: ConfigService) { }
 
     private get ROBOTFLOW_API_URL(): string {
-        return this.configService.get<string>('ROBOTFLOW_API_URL');
+        return this.configService.getOrThrow<string>('ROBOTFLOW_API_URL');
     }
 
     private get ROBOTFLOW_API_KEY(): string {
-        return this.configService.get<string>('ROBOTFLOW_API_KEY');
+        return this.configService.getOrThrow<string>('ROBOTFLOW_API_KEY');
     }
 
     private get IMAGE_PATH(): string {
-        return this.configService.get<string>('IMAGE_PATH');
+        return this.configService.getOrThrow<string>('IMAGE_PATH');
     }
 
     async inferImage(imageBuffer: Buffer): Promise<InferenceResponse | null> {
