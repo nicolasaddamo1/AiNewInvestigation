@@ -11,11 +11,11 @@ export class BuyService {
     constructor(private readonly configService: ConfigService) { }
 
     private get ROBOTFLOW_API_URL(): string {
-        return this.configService.getOrThrow<string>('ROBOTFLOW_API_URL');
+        return this.configService.getOrThrow<string>('ROBOTFLOW_API_URL2');
     }
 
     private get ROBOTFLOW_API_KEY(): string {
-        return this.configService.getOrThrow<string>('ROBOTFLOW_API_KEY');
+        return this.configService.getOrThrow<string>('ROBOTFLOW_API_KEY2');
     }
 
     // Función para hacer inferencias con Roboflow
